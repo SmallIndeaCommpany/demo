@@ -1,18 +1,19 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <nav-bar></nav-bar>
+    <first-block-vue></first-block-vue>
+    <main-preview-vue></main-preview-vue>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
-export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
+import MainPreviewVue from '@/components/mainPreview.vue'
+import FirstBlockVue from '@/components/FirstBlock.vue'
+import NavBar from '@/components/NavBar.vue'
+  export default {
+    components:{  MainPreviewVue, FirstBlockVue, NavBar }
   }
-}
 </script>
+
+        

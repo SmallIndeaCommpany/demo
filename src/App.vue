@@ -15,7 +15,8 @@ div {
 }
 
 t1 {
-  font-family: Poppins;
+  font-family: 'Poppins';
+  font-style: normal;
   font-size: 22px;
   font-weight: 600;
   line-height: 33px;
@@ -27,7 +28,7 @@ t1 {
 }
 
 t2 {
-  font-family: Poppins;
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -36,7 +37,8 @@ t2 {
   color: rgba(255, 255, 255, 0.55);
 }
 t3 {
-  font-family: Poppins;
+  font-family: 'Poppins';
+  font-style: normal;
   font-size: 50px;
   font-weight: 500;
   line-height: 70px;

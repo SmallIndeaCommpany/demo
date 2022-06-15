@@ -95,7 +95,7 @@ export default {
   margin-right: 100px;
   width: 100%;
 
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;

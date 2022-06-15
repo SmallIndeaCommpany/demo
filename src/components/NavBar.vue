@@ -1,10 +1,7 @@
 <template>
   <div class="container">
     <div class="navbar">
-      <div class="logoNav">
-        <img src="../assets/Logo.svg" alt="" />
-        <t1>antools.</t1>
-      </div>
+      <LogoSiteVue></LogoSiteVue>
       <div class="navigNav">
         <button>
            <t2>Home</t2> 
@@ -34,7 +31,8 @@
 </template>
 
 <script>
-export default {};
+import LogoSiteVue from './logoSite.vue';
+export default { components: { LogoSiteVue } };
 </script>
 
 <style scoped>
@@ -44,13 +42,6 @@ button{
 .navbar{
     height: 50px;
     margin-top: 30px;
-}
-.logoNav{
-    display: flex;
-    gap: 12px;
-    height: 100%;
-    -moz-user-select: none;
-    user-select: none;
 }
 .navigNav{
     display: flex;

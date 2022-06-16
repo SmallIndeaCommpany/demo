@@ -3,26 +3,26 @@
     <div class="navbar">
       <LogoSiteVue></LogoSiteVue>
       <div class="navigNav">
-        <button>
+        <button @click="$router.push('/')">
            <t2>Home</t2> 
         </button>
-        <button>
+        <button @click="$router.push('/categories')">
             <t2>Categories</t2>
         </button>
-        <button>
+        <button @click="$router.push('/collection')">
             <t2>My Collections</t2>
         </button>
-        <button>
+        <button @click="$router.push('/blog')">
             <t2>Blog</t2>
         </button>
     
       </div>
       <div class="loginNav">
-        <button class="loginBtn">
+        <button class="loginBtn" @click="$router.push('/auth')">
           <t2>Login</t2>  
         </button>
         
-        <button class="singUpBtn">
+        <button class="singUpBtn" @click="$router.push('/auth')">
           <t2>Sing up</t2>
         </button>
       </div>

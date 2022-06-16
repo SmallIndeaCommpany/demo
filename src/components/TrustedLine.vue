@@ -45,6 +45,8 @@ export default {
 
 .trusted t1 {
     text-align: center;
+    -moz-user-select: none;
+    user-select: none;
 }
 .eclipse{
     position: absolute;

@@ -32,6 +32,8 @@ export default {
     display: flex;
     flex-direction: column;
     text-align: center;
+    -moz-user-select: none;
+    user-select: none;
 }
 
 .container {

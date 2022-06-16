@@ -1,5 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import Auth from '@/views/AuthView.vue'
+import Categories from '@/views/CategoriesView.vue'
+import Collection from '@/views/MyCollectionsView.vue'
+import Blog from '@/views/BlogView.vue'
 
 const routes = [
   {
@@ -8,10 +12,25 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/about',
-    name: 'about',
-  
-  }
+    path: '/auth',
+    name: 'auth',
+    component: Auth
+  },
+  {
+    path: '/categories',
+    name: 'categories',
+    component: Categories
+  },
+  {
+    path: '/collection',
+    name: 'collection',
+    component: Collection
+  },
+  {
+    path: '/blog',
+    name: 'blog',
+    component: Blog
+  },
 ]
 
 const router = createRouter({

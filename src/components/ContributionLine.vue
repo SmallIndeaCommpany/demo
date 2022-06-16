@@ -30,6 +30,13 @@ export default {
 .contribution t2 {
     margin-top: 10px;
     margin-bottom: 100px;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.contribution t3{
+    -moz-user-select: none;
+    user-select: none;
 }
 
 .enter{

@@ -8,18 +8,18 @@
                 <t2 class="special">Copyright 2022. Antools</t2>
                 <t2>Antool is a web collection of<br>information on paid or free Design<br>and Development tools</t2>
             </div>
-            <div>
+            <div class="stand">
                 <t1>Contact Us</t1>
                 <t2>+621987463</t2>
                 <t2>M Building, No.10 A</t2>
                 <t2>antools@awesome.com</t2>
             </div>
-            <div>
+            <div class="stand">
                 <t1>Categories</t1>
                 <t2>Design</t2>
                 <t2>Development</t2>
             </div>
-            <div>
+            <div class="stand">
                 <t1>Company Info</t1>
                 <t2>About Us</t2>
                 <t2>Our Partners</t2>
@@ -58,6 +58,7 @@ export default {
     display: flex;
     flex-direction: column;
     text-align: center;
+    
 }
 
 .botline t1 {
@@ -84,5 +85,8 @@ export default {
     color: #fff;
     margin-bottom: 20px;
     margin-top: 20px;
+}
+.stand{
+    margin-left: auto;
 }
 </style>

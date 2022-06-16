@@ -38,6 +38,8 @@ export default {
     width: 35%;
     display: flex;
     flex-direction: column;
+    -moz-user-select: none;
+    user-select: none;
 }
 .texttools t3{
     margin-bottom: 30px;

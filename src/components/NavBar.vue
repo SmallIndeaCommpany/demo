@@ -18,11 +18,11 @@
     
       </div>
       <div class="loginNav">
-        <button class="loginBtn" @click="$router.push('/auth')">
+        <button class="loginBtn" @click="$router.push('/auth/registration')">
           <t2>Login</t2>  
         </button>
         
-        <button class="singUpBtn" @click="$router.push('/auth')">
+        <button class="singUpBtn" @click="$router.push('/auth/sing')">
           <t2>Sing up</t2>
         </button>
       </div>

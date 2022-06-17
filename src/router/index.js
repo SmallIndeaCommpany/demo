@@ -13,7 +13,16 @@ const routes = [
   },
   {
     path: '/auth',
-    name: 'auth',
+    redirect: '/auth/sing'
+  },
+  {
+    path: '/auth/registration',
+    name: 'authLog',
+    component: Auth
+  },
+  {
+    path: '/auth/sing',
+    name: 'authSing',
     component: Auth
   },
   {

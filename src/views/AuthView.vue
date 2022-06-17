@@ -1,13 +1,25 @@
 <template>
-  <div>
-    <NavBarVue></NavBarVue>
-    <div><t3>This is auth</t3></div>
-  </div>
+
+  <NavBarVue></NavBarVue>
+  <AuthBlock></AuthBlock>
+  <BotLine></BotLine>
+
 </template>
 
 <script>
 import NavBarVue from '@/components/NavBar.vue';
-  export default {
-    components: { NavBarVue }
+import BotLine from '@/components/BotLine.vue';
+import AuthBlock from '@/components/authBlock.vue';
+
+
+
+
+export default {
+components: { NavBarVue, BotLine, AuthBlock },
+ 
+  
 }
 </script>
+<style scoped>
+
+</style>

@@ -7,30 +7,32 @@
             </div>
             <div class="inputBlock">
                 <t2>Email</t2>
-                <input type="email" />
+                <input type="email" v-model="email" />
                 <t2>Пароль</t2>
-                <input type="password" />
+                <input type="password" v-model="password" />
             </div>
             <div>
                 <input type="checkbox">
                 <t2>Запомнить пароль</t2>
             </div>
-            <button>
-                <t2>Войти</t2>
+            <button @click="login">
+                <t2>{{ btntext }}</t2>
             </button>
         </div>
     </div>
 </template>
 
 <script>
-
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth'
 
 export default {
     data() {
-         
+
         return {
-            
-            picked: ''
+            picked: '',
+            btntext: 'Войти',
+            email: '',
+            password: '',
         }
     },
     mounted() {
@@ -39,31 +41,65 @@ export default {
     watch: {
         picked: {
             handler(val) {
+                this.password = '';
                 if (val == 'auth') {
                     this.$router.push('/auth/sing')
+                    this.btntext = 'Войти'
                 } else if (val == 'registr') {
                     this.$router.push('/auth/registration')
+                    this.btntext = 'Зарегистрироваться'
                 }
             }
         },
-
-        $route:{
-            handler(newVal){
-               this.picked = this.authMod(newVal)
+        $route: {
+            handler(newVal) {
+                this.picked = this.authMod(newVal)
             }
 
         },
     },
-    methods:{
-         authMod (router){
-                let mod = ''
-                if(router.path == '/auth/sing' ){
-                    mod = 'auth'  
-                }else if(router.path == '/auth/registration'){
-                    mod = 'registr'
-                }
-                return mod
+    methods: {
+        authMod(router) {
+            let mod = ''
+            if (router.path == '/auth/sing') {
+                mod = 'auth'
+            } else if (router.path == '/auth/registration') {
+                mod = 'registr'
             }
+            return mod
+        },
+        login() {
+            if (this.picked == 'registr') { this.register() }
+            else if (this.picked == 'auth') { this.singIn() }
+
+
+        },
+        register() {
+            const auth = getAuth()
+            if (this.control()) {
+                createUserWithEmailAndPassword(auth, this.email, this.password)
+                    .then(() => {
+                        console.log("регистрация успешна");
+                        sendEmailVerification(auth.currentUser).then(() => console.log('email send'))
+                    })
+                    .catch(() => console.log("Ошибка регистрации"))
+            }
+
+        },
+        singIn() {
+            const auth = getAuth()
+            if(this.control){
+                signInWithEmailAndPassword(auth,this.email,this.password)
+                .then(()=>{console.log("вход успешен")})
+                .catch(() => {console.log("ошибка")})
+            }
+        },
+
+        control() {
+            if ((this.email == '') || (this.picked == '')) {
+                return false
+            } else return true
+        }
     }
 
 

@@ -58,7 +58,7 @@ export default {
   methods: {
     logOut() {
       const auth = getAuth()
-      auth.signOut().then(() => this.userLogin = auth.currentUser)
+      auth.signOut().then(() => store.commit('setLogin',auth.currentUser))
     }
   }
 };

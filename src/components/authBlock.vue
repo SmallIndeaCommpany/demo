@@ -124,6 +124,7 @@ export default {
 
                 signInWithEmailAndPassword(auth, this.email, this.password)
                     .then(() => {
+                        store.commit('setLogin',auth.currentUser)
                         this.$router.push('/');
                     })
             }

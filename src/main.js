@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 
 import { initializeApp } from "firebase/app";
+import { getFirestore} from 'firebase/firestore'
 
 
 const firebaseConfig = {
@@ -17,9 +18,14 @@ const firebaseConfig = {
   };
 
 const app = createApp(App);
-initializeApp(firebaseConfig);
+const fapp = initializeApp(firebaseConfig);
+const db = getFirestore(fapp)
 app.use(store);
 app.use(router);
 app.mount('#app');
+
+export{
+  db
+}
 
 

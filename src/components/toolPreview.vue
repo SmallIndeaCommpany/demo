@@ -98,6 +98,8 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    -moz-user-select: none;
+    user-select: none;
 }
 
 .firstLine div {
@@ -122,6 +124,8 @@ export default {
 .textBlock {
     margin-top: 30px;
     margin-bottom: 30px;
+    -moz-user-select: none;
+    user-select: none;
 }
 
 .actionLine {

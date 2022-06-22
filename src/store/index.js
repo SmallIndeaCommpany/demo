@@ -9,7 +9,7 @@ export default createStore({
     tools: null,
   },
   getters: {
-    getAllTools(state){ 
+    getAllTools(state){
       return state.tools
     },
     getNewTools(state){

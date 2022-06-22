@@ -21,9 +21,13 @@ import TrustedLineVue from '@/components/TrustedLine.vue'
 import NewcomerToolsVue from '@/components/NewcomerTools.vue'
 import DevSliderVue from '@/components/DevSlider.vue'
 import ContributionLineVue from '../components/ContributionLine.vue'
+import store from '@/store'
 
   export default {
-    components:{ MainPreviewVue, FirstBlockVue, NavBar, BotLineVue, TrustedLineVue, NewcomerToolsVue, DevSliderVue, ContributionLineVue }
+    components:{ MainPreviewVue, FirstBlockVue, NavBar, BotLineVue, TrustedLineVue, NewcomerToolsVue, DevSliderVue, ContributionLineVue },
+     mounted() {
+        store.dispatch('getTools')
+    },
   }
 </script>
 

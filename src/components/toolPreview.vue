@@ -4,21 +4,19 @@
         <div class="firstLine">
             <img src="@/assets/logos_visual-studio-code.svg" alt='@/assets/no_image.png'>
             <div>
-                <t1> test name</t1>
-                <t2>test trial</t2>
+                <t1>{{ name }}</t1>
+                <t2>{{ payd }}</t2>
             </div>
         </div>
         <div class="textBlock">
-            <t2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni dolorum magnam asperiores accusamus
-                accusantium ex beatae voluptatibus aut iusto provident? Dolores eligendi eos optio repudiandae ut
-                maiores nulla, at magni.</t2>
+            <t2>{{ text }}</t2>
         </div>
         <div class="actionLine">
             <label class="likeBox">
                 <input type="checkbox">
                 <span class="checkmark"></span>
             </label>
-            <button>
+            <button @click="visitTool">
                 <t2>Visit</t2>
             </button>
         </div>
@@ -28,43 +26,74 @@
 <script>
 
 export default {
+    props: ['tool'],
+    data() {
+        return {
+            name: '',
+            payd: '',
+            text: '',
+            ref: '',
+        }
+    },
+    mounted() {
+        if (this.tool != null) {
+            const data = this.tool.data()
+            this.name = this.tool.id
+            this.payd = data.payd
+            this.text = data.text
+            this.ref = data.ref
 
+        }
+
+    },
+    methods: {
+        visitTool() {
+            if (this.ref != '') {
+                window.location.href = this.ref
+            }
+
+
+        }
+    }
 }
 </script>
 
 <style scoped>
-
-.previewBox{
+.previewBox {
     position: relative;
     border-radius: 15px;
-    padding: 30px; 
+    padding: 30px;
     transition: all 0.5s;
     overflow: hidden;
 }
-.previewBox:hover{
+
+.previewBox:hover {
     background: rgba(40, 48, 54, 0.6);
     transform: translateY(-10px);
     transition: all 0.5s;
-    
+
 }
-.previewBox:hover .actionLine button{
+
+.previewBox:hover .actionLine button {
     background: #FF6E30;
     transition: all 1s;
 }
 
-.previewBox:hover .actionLine button t2{
-    color:#FFFFFF;
+.previewBox:hover .actionLine button t2 {
+    color: #FFFFFF;
     transition: all 0.5s;
 
 }
-.previewBox:hover .eclipse{
+
+.previewBox:hover .eclipse {
     background: rgba(255, 110, 48, 0.6);
     transition: all 2s;
 }
 
-.previewBox div{
+.previewBox div {
     background: none;
 }
+
 .firstLine {
     display: flex;
     flex-direction: row;
@@ -85,7 +114,8 @@ export default {
 .firstLine t2 {
     color: #FFA537;
 }
-.firstLine img{
+
+.firstLine img {
     background: none;
 }
 
@@ -153,7 +183,8 @@ export default {
     box-shadow: 0px 5px 10px -3px rgba(18, 18, 18, 0.15);
     transition: all 250ms;
 }
-.eclipse{
+
+.eclipse {
     display: block;
     position: absolute;
     top: 5px;
@@ -164,7 +195,6 @@ export default {
     margin-top: 5px;
     background: rgba(255, 110, 48, 0);
     filter: blur(50px);
-    border-radius: 50%;  
+    border-radius: 50%;
 }
-
 </style>

@@ -5,12 +5,10 @@
             <t2>Tools for the best Designers and Developers<br />most popularly used in the world</t2>
         </div>
         <div class="mainContent">
-            <ToolPreviewVue></ToolPreviewVue>
-            <ToolPreviewVue></ToolPreviewVue>
-            <ToolPreviewVue></ToolPreviewVue>
-            <ToolPreviewVue></ToolPreviewVue>
-            <ToolPreviewVue></ToolPreviewVue>
-            <ToolPreviewVue></ToolPreviewVue>
+            <div v-for="tool in toolsList" :key="tool.id">
+                <ToolPreviewVue :tool="tool"></ToolPreviewVue>
+            </div>
+
         </div>
         <div class="loadBtn">
             <button>
@@ -21,9 +19,15 @@
 </template>
 
 <script>
+import store from '@/store';
 import ToolPreviewVue from './toolPreview.vue';
 export default {
-    components: { ToolPreviewVue }
+    components: { ToolPreviewVue },
+    computed: {
+        toolsList: function () {
+            return store.getters.getAllTools
+        },
+    }
 }
 </script>
 
@@ -55,18 +59,18 @@ export default {
 .orangeText {
     color: #ff6e30;
     font-weight: 500;
-font-size: 20px;
-line-height: 30px;
+    font-size: 20px;
+    line-height: 30px;
 }
 
 
-.mainContent{
-display: grid;
-text-align: center;
-margin-top: 100px;
-margin-bottom: 100px;
-grid-template-columns: 1fr 1fr 1fr;
-row-gap: 100px;
-column-gap: 20px;
+.mainContent {
+    display: grid;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 100px;
+    column-gap: 20px;
 }
 </style>

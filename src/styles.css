@@ -1,0 +1,186 @@
+*{
+    background-color: #1e252b;
+    
+  }
+
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  ul[class],
+  ol[class],
+  li,
+  figure,
+  figcaption,
+  blockquote,
+  dl,
+  dd {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+
+
+
+  #app{
+    overflow: hidden;
+  }
+  div {
+    background-color: none;
+  }
+  
+  h1 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 33px;
+    letter-spacing: 0em;
+    text-align: left;
+    background-color: none;
+  
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  h2 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    background: none;
+    color: rgba(255, 255, 255, 0.55);
+  }
+  h3 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 70px;
+    letter-spacing: 0em;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+
+ 
+  
+  .navbar {
+    height: 50px;
+    margin-top: 30px;
+  }
+  
+  .navbar button {
+    border: none;
+  }
+
+  .navigNav {
+    display: flex;
+    gap: 20px;
+    height: 100%;
+  }
+  
+  .loginNav {
+    display: flex;
+    gap: 30px;
+    height: 100%;
+  }
+  
+  .singUpBtn {
+    background: #FF6E30;
+    border-radius: 8px;
+    height: 100%;
+    width: 150px;
+  }
+  
+  .singUpBtn h2 {
+    color: #FDF5FF;
+  }
+
+
+  .block {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-between;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    width: 45%;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .subtext {
+    margin-top: 30px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: rgba(255, 255, 255, 0.55);
+  }
+  
+  .serch {
+    display: flex;
+    margin-top: 60px;
+    background: #283036;
+    border-radius: 15px;
+    height: 64px;
+  }
+  
+  .serch button {
+    border: none;
+    background: #ff6e30;
+    width: 130px;
+    border-radius: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-right: 10px;
+  }
+  
+  .serch img {
+    background: none;
+    margin-left: 21px;
+  }
+  
+  .serch input {
+    background: none;
+    border: none;
+    margin: auto;
+    margin-left: 15px;
+    margin-right: 100px;
+    width: 100%;
+  
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .serch h2 {
+    color: #ffffff;
+  }
+  
+  .social {
+    display: flex;
+    margin-top: 120px;
+    gap: 40px;
+  }
+  
+  .social img {
+    background: none;
+  }
+  
+  .ilustration {
+    position: absolute;
+    right:-150px;
+  }

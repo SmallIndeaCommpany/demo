@@ -5,28 +5,28 @@
                 <label class="radioSelect">
                     <input type="radio" name="authRadio" value="auth" v-model="picked" />
                     <span class="cheakmark">
-                        <t2>Sing up</t2>
+                        <h2>Sing up</h2>
                     </span>
                 </label>
                 <label class="radioSelect">
                     <input type="radio" name="authRadio" value="registr" v-model="picked" />
                     <span class="cheakmark">
-                        <t2>Registration</t2>
+                        <h2>Registration</h2>
                     </span>
                 </label>
 
             </div>
             <div class="inputBlock">
-                <t2>Email</t2>
+                <h2>Email</h2>
                 <input type="email" v-model="email" />
                 <template v-if="picked == 'registr'">
-                    <t2>Nickname</t2>
+                    <h2>Nickname</h2>
                     <input type="text" v-model="nickname" />
                 </template>
-                <t2>Password</t2>
+                <h2>Password</h2>
                 <input type="password" v-model="password" />
                 <template v-if="picked == 'registr'">
-                    <t2>Repeat password</t2>
+                    <h2>Repeat password</h2>
                     <input type="password" v-model="repeatPassword" />
                 </template>
             </div>
@@ -34,13 +34,13 @@
                 <label>
                     <input type="checkbox">
                     <span>
-                        <t2>Remember me</t2>
+                        <h2>Remember me</h2>
                     </span>
                 </label>
             </div>
             <div class="authBtn">
                 <button @click="login">
-                    <t2>{{ btntext }}</t2>
+                    <h2>{{ btntext }}</h2>
                 </button>
             </div>
 
@@ -254,7 +254,7 @@ export default {
     border: none;
 }
 
-.authBtn t2 {
+.authBtn h2 {
     color: #fff;
 }
 </style>

@@ -5,25 +5,25 @@
 
             <div class="logo">
                 <LogoSiteVue></LogoSiteVue>
-                <t2 class="special">Copyright 2022. Antools</t2>
-                <t2>Antool is a web collection of<br>information on paid or free Design<br>and Development tools</t2>
+                <h2 class="special">Copyright 2022. Antools</h2>
+                <h2>Antool is a web collection of<br>information on paid or free Design<br>and Development tools</h2>
             </div>
             <div class="stand">
-                <t1>Contact Us</t1>
-                <t2>+621987463</t2>
-                <t2>M Building, No.10 A</t2>
-                <t2>antools@awesome.com</t2>
+                <h1>Contact Us</h1>
+                <h2>+621987463</h2>
+                <h2>M Building, No.10 A</h2>
+                <h2>antools@awesome.com</h2>
             </div>
             <div class="stand">
-                <t1>Categories</t1>
-                <t2>Design</t2>
-                <t2>Development</t2>
+                <h1>Categories</h1>
+                <h2>Design</h2>
+                <h2>Development</h2>
             </div>
             <div class="stand">
-                <t1>Company Info</t1>
-                <t2>About Us</t2>
-                <t2>Our Partners</t2>
-                <t2>Blog</t2>
+                <h1>Company Info</h1>
+                <h2>About Us</h2>
+                <h2>Our Partners</h2>
+                <h2>Blog</h2>
             </div>
         </div>
     </div>
@@ -61,7 +61,7 @@ export default {
     
 }
 
-.botline t1 {
+.botline h1 {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
@@ -72,7 +72,7 @@ export default {
     color: rgba(255, 255, 255, 0.9);
 }
 
-.botline t2 {
+.botline h2 {
     text-align: left;
     margin-bottom: 10px;
 }

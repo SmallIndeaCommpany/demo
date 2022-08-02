@@ -1,7 +1,7 @@
 <template>
   <div>
     <NavBarVue></NavBarVue>
-    <div><t3>This is MyCollection</t3></div>
+    <div><h3>This is MyCollection</h3></div>
   </div>
 </template>
 

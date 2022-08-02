@@ -2,11 +2,11 @@
     <div class="container">
         <div class="tools">
             <div class="texttools">
-                <t3>Newcomer Tools</t3>
-                <t2>Wow! see the latest update of the most<br>recommended tools from reliable designers<br>and
-                    developers</t2>
+                <h3>Newcomer Tools</h3>
+                <h2>Wow! see the latest update of the most<br>recommended tools from reliable designers<br>and
+                    developers</h2>
                 <button>
-                    <t2>Explore more</t2>
+                    <h2>Explore more</h2>
                 </button>
             </div>
             <div class="newPreview">
@@ -49,7 +49,7 @@ export default {
     user-select: none;
 }
 
-.texttools t3 {
+.texttools h3 {
     margin-bottom: 30px;
 }
 
@@ -61,7 +61,7 @@ export default {
     border-radius: 8px;
 }
 
-.texttools button t2 {
+.texttools button h2 {
     color: #fff;
 }
 

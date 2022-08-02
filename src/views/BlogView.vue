@@ -1,7 +1,7 @@
 <template>
   <div>
     <NavBarVue></NavBarVue>
-    <div><t3>This is Blog</t3></div>
+    <div><h3>This is Blog</h3></div>
   </div>
 </template>
 

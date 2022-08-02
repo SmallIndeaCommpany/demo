@@ -1,8 +1,8 @@
 <template>
     <div class="container">
-        <div class="heade">
-            <t3>Most Popular Tools</t3>
-            <t2>Tools for the best Designers and Developers<br />most popularly used in the world</t2>
+        <div class="head">
+            <h3>Most Popular Tools</h3>
+            <h2>Tools for the best Designers and Developers<br />most popularly used in the world</h2>
         </div>
         <div class="mainContent">
             <div v-for="tool in toolsList" :key="tool.id">
@@ -11,8 +11,8 @@
 
         </div>
         <div class="loadBtn">
-            <button>
-                <t2 class="orangeText">Load More</t2>
+            <button @click="updateList">
+                <h2 class="orangeText">Load More</h2>
             </button>
         </div>
     </div>
@@ -25,14 +25,19 @@ export default {
     components: { ToolPreviewVue },
     computed: {
         toolsList: function () {
-            return store.getters.getAllTools
+            return store.getters.getPopularTools
         },
+    },
+    methods:{
+        updateList(){
+            store.commit('setLastId')
+        }
     }
 }
 </script>
 
 <style scoped>
-.heade {
+.head {
     display: flex;
     flex-direction: column;
     text-align: center;

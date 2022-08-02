@@ -2,7 +2,7 @@
     <div class="container">
         <div class="trusted">
             <span class="eclipse"></span>
-            <t1>Trusted more than 150+ brand</t1>
+            <h1>Trusted more than 150+ brand</h1>
             <div>
                 <img src="@/assets/logos_microsoft.svg" alt="">
                 <img src="@/assets/logos_google.svg" alt="">
@@ -43,7 +43,7 @@ export default {
     margin-top: 50px;
 }
 
-.trusted t1 {
+.trusted h1 {
     text-align: center;
     -moz-user-select: none;
     user-select: none;

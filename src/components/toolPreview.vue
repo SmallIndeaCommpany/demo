@@ -4,12 +4,12 @@
         <div class="firstLine">
             <img src="@/assets/logos_visual-studio-code.svg" alt='@/assets/no_image.png'>
             <div>
-                <t1>{{ name }}</t1>
-                <t2>{{ payd }}</t2>
+                <h1>{{ name }}</h1>
+                <h2>{{ payd }}</h2>
             </div>
         </div>
         <div class="textBlock">
-            <t2>{{ text }}</t2>
+            <h2>{{ text }}</h2>
         </div>
         <div class="actionLine">
             <label class="likeBox">
@@ -17,7 +17,7 @@
                 <span class="checkmark"></span>
             </label>
             <button @click="visitTool">
-                <t2>Visit</t2>
+                <h2>Visit</h2>
             </button>
         </div>
     </div>
@@ -61,10 +61,25 @@ export default {
 <style scoped>
 .previewBox {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border-radius: 15px;
+    height: 100%;
     padding: 30px;
+    animation: 2s show ease;
     transition: all 0.5s;
     overflow: hidden;
+}
+@keyframes show {
+    from {
+         opacity: 0;
+         transform: translate(0, -100%);
+    }
+    to { 
+        opacity: 1; 
+        transform: translate(0,0);
+    }
 }
 
 .previewBox:hover {
@@ -79,7 +94,7 @@ export default {
     transition: all 1s;
 }
 
-.previewBox:hover .actionLine button t2 {
+.previewBox:hover .actionLine button h2 {
     color: #FFFFFF;
     transition: all 0.5s;
 
@@ -108,12 +123,12 @@ export default {
     text-align: center;
 }
 
-.firstLine t1 {
+.firstLine h1 {
     text-align: center;
     background: none;
 }
 
-.firstLine t2 {
+.firstLine h2 {
     color: #FFA537;
 }
 
@@ -130,7 +145,8 @@ export default {
 
 .actionLine {
     display: flex;
-    flex-direction: row;
+    margin-bottom: 5px;
+    flex-direction: row;  
     justify-content: space-between;
 }
 
@@ -141,7 +157,7 @@ export default {
     border: none;
 }
 
-.actionLine t2 {
+.actionLine h2 {
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;

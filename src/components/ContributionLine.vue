@@ -1,12 +1,12 @@
 <template>
     <div class="container">
         <div class="contribution">
-            <t3>Become a contributor?</t3>
-            <t2>Join us and get tips & tricks to become a great<br>Designer and Developer</t2>
+            <h3>Become a contributor?</h3>
+            <h2>Join us and get tips & tricks to become a great<br>Designer and Developer</h2>
             <div class="enter">
                 <input placeholder="Enter your email..." />
                 <button>
-                    <t2>Join Us</t2>
+                    <h2>Join Us</h2>
                 </button>
             </div>
         </div>
@@ -27,14 +27,14 @@ export default {
     text-align: center;
 }
 
-.contribution t2 {
+.contribution h2 {
     margin-top: 10px;
     margin-bottom: 100px;
     -moz-user-select: none;
     user-select: none;
 }
 
-.contribution t3{
+.contribution h3{
     -moz-user-select: none;
     user-select: none;
 }
@@ -72,7 +72,7 @@ export default {
     margin-right: 10px;
 }
 
-.enter t2 {
+.enter h2 {
     color: #fff;
 }
 </style>

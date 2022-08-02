@@ -178,6 +178,7 @@ export default {
 }
 
 .radioSelect input {
+
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -233,10 +234,12 @@ export default {
 }
 
 .passrem {
+    
     margin-left: 10px;
 }
 
 .passrem input {
+    
     margin-right: 5px;
 }
 
